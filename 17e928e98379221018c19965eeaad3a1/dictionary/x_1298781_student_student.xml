@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="733b6ced8379221018c19965eeaad3ea" label="Student" max_length="40" name="x_1298781_student_student" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="name" type="string"/>
+        <element attributes="encode_utf8=false" label="Class" max_length="32" name="class" reference="x_1298781_student_class" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="class"/>
+        </index>
+    </element>
+</database>
