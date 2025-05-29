@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-28 18:25:20</sys_created_on>
+        <sys_id>0e30d561837d221018c19965eeaad396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1298781_student_student.class.x_1298781_student.student_manager</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_security_acl display_value="x_1298781_student_student.class">8b009561837d221018c19965eeaad35f</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_0e30d561837d221018c19965eeaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-28 18:25:20</sys_updated_on>
+        <sys_user_role display_value="x_1298781_student.student_manager" name="x_1298781_student.student_manager">e91aec698379221018c19965eeaad332</sys_user_role>
+    </sys_security_acl_role>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Student Database">17e928e98379221018c19965eeaad3a1</application>
+        <file_path/>
+        <instance_id>8ee2e0d53b4b465cc55a348aa4e45af2</instance_id>
+        <instance_name>dev278190</instance_name>
+        <name>sys_security_acl_role_0e30d561837d221018c19965eeaad396</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-28 18:25:20</sys_created_on>
+        <sys_id>0e30d561837d221018c19965eeaad396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1298781_student_student.class.x_1298781_student.student_manager</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_security_acl display_value="x_1298781_student_student.class">8b009561837d221018c19965eeaad35f</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_0e30d561837d221018c19965eeaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-28 18:25:20</sys_updated_on>
+        <sys_user_role display_value="x_1298781_student.student_manager" name="x_1298781_student.student_manager">e91aec698379221018c19965eeaad332</sys_user_role>
+    </sys_security_acl_role>
+</record_update>]]></payload>
+        <payload_hash>1044583251</payload_hash>
+        <record_name>x_1298781_student_student.class.x_1298781_student.student_manager</record_name>
+        <reverted_from/>
+        <source>005645f5c331221034d93d0ed401318b</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-29 12:16:34</sys_created_on>
+        <sys_id>f556c5f5c331221034d93d0ed40131cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1971bf905b20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-29 12:16:34</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>b556c5f527312210581b6db4f882e5cd</update_guid>
+        <update_guid_history>b556c5f527312210581b6db4f882e5cd:1044583251</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1298781_student_student.class.x_1298781_student.student_manager">02da9571c3b1221034d93d0ed4013102</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-29 13:46:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>39587a80e9a44556b46f37cfe9333804</sys_id>
+        <sys_metadata>0e30d561837d221018c19965eeaad396</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1298781_student_student.class.x_1298781_student.student_manager</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_parent display_value="x_1298781_student_student.class">8b009561837d221018c19965eeaad35f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_scope_delete display_value="">4ffeece982b04aa7b840646d3cd2edc1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_0e30d561837d221018c19965eeaad396</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_0e30d561837d221018c19965eeaad396">f556c5f5c331221034d93d0ed40131cd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-29 13:46:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
