@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Assign Class</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var studentNumber = request.pathParams.studentNumber || "";
+    var classNumber = request.pathParams.classNumber || "";
+
+    if (!studentNumber || !classNumber) {
+        response.setError(sn_ws_err.BadRequestError("Both studentNumber and classNumber are required!"));
+        return;
+    }
+
+    var studentGr = new GlideRecordSecure('x_1298781_student_student');
+    studentGr.addQuery("number", studentNumber);
+    studentGr.query();
+
+    if (!studentGr.next()) {
+        response.setError(new sn_ws_err.NotFoundError("Student not found"));
+        return;
+    }
+
+    if (!studentGr.canWrite()) {
+		let error = new sn_ws_err.ServiceError();
+        error.setStatus(500);
+        error.setMessage("You don't have permission to update this student.");
+        response.setError(error);
+        return;
+    }
+
+	if (!studentGr.getElement("class").canWrite()) {
+		let error = new sn_ws_err.ServiceError();
+        error.setStatus(500);
+        error.setMessage("You don't have permission to update class field on student.");
+        response.setError(error);
+        return;
+	}
+
+    var classGr = new GlideRecordSecure('x_1298781_student_class');
+    classGr.addQuery("number", classNumber);
+    classGr.query();
+
+    if (!classGr.next()) {
+        response.setError(new sn_ws_err.NotFoundError("Class not found"));
+        return;
+    }
+	
+    studentGr.setValue("class", classGr.getUniqueValue());
+
+    if (!studentGr.update()) {
+        let error = new sn_ws_err.ServiceError();
+        error.setStatus(500);
+        error.setMessage("Cannot update student");
+        response.setError(error);
+        return;
+    }
+
+    response.setBody({
+        "id": studentGr.getUniqueValue(),
+        "name": studentGr.getValue("name"),
+        "class": studentGr.getValue("class")
+    })
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1298781_student/students/students/{studentNumber}/class/{classNumber}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/students/{studentNumber}/class/{classNumber}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-30 14:24:15</sys_created_on>
+        <sys_id>233c22c2c371221034d93d0ed401312e</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Assign Class</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_update_name>sys_ws_operation_233c22c2c371221034d93d0ed401312e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-30 14:59:02</sys_updated_on>
+        <web_service_definition display_value="Students">04b06646c331221034d93d0ed40131bb</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
