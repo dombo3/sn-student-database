@@ -27,20 +27,20 @@
     }
 
     if (!studentGr.canWrite()) {
-		let error = new sn_ws_err.ServiceError();
+        let error = new sn_ws_err.ServiceError();
         error.setStatus(500);
         error.setMessage("You don't have permission to update this student.");
         response.setError(error);
         return;
     }
 
-	if (!studentGr.getElement("class").canWrite()) {
-		let error = new sn_ws_err.ServiceError();
+    if (!studentGr.getElement("class").canWrite()) {
+        let error = new sn_ws_err.ServiceError();
         error.setStatus(500);
         error.setMessage("You don't have permission to update class field on student.");
         response.setError(error);
         return;
-	}
+    }
 
     var classGr = new GlideRecordSecure('x_1298781_student_class');
     classGr.addQuery("number", classNumber);
@@ -50,9 +50,19 @@
         response.setError(new sn_ws_err.NotFoundError("Class not found"));
         return;
     }
-	
-    studentGr.setValue("class", classGr.getUniqueValue());
 
+    var validator = new StudentClassValidator();
+    var result = validator.canAssignStudentToClass(classGr.getUniqueValue());
+
+    if (!result.allowed) {
+		let error = new sn_ws_err.ServiceError();
+		error.setStatus(400);
+		error.setMessage(result.message);
+        response.setError(error);
+        return;
+    }
+
+    studentGr.setValue("class", classGr.getUniqueValue());
     if (!studentGr.update()) {
         let error = new sn_ws_err.ServiceError();
         error.setStatus(500);
@@ -81,14 +91,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-05-30 14:24:15</sys_created_on>
         <sys_id>233c22c2c371221034d93d0ed401312e</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Assign Class</sys_name>
         <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
         <sys_update_name>sys_ws_operation_233c22c2c371221034d93d0ed401312e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-05-30 14:59:02</sys_updated_on>
+        <sys_updated_on>2025-06-06 09:57:58</sys_updated_on>
         <web_service_definition display_value="Students">04b06646c331221034d93d0ed40131bb</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

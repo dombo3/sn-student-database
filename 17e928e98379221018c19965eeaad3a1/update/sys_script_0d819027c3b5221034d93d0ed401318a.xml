@@ -35,24 +35,17 @@
         return;
     }
 
-    var maxProp = Number(gs.getProperty('x_1298781_student.max_student_per_class', '20'));
-    var max = isNaN(maxProp) ? 20 : maxProp;
+	if (previous && previous.getValue("class") === classId) {
+		return;
+	}
 
-    var studentGr = new GlideAggregate('x_1298781_student_student');
-    studentGr.addQuery('class', classId);
+	var validator = new StudentClassValidator();
+	var result = validator.canAssignStudentToClass(classId);
 
-    studentGr.addAggregate('COUNT');
-    studentGr.query();
-
-    var count = 0;
-    if (studentGr.next()) {
-        count = Number(studentGr.getAggregate("COUNT"));
-    }
-
-    if (!isNaN(count) && count >= max) {
-        current.setAbortAction(true);
-        gs.addErrorMessage("Cannot assign student. Max number of students per class (" + max + ") reached.");
-    }
+	if (!result.allowed) {
+		current.setAbortAction(true);
+        gs.addErrorMessage(result.message);
+	}
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -60,7 +53,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0d819027c3b5221034d93d0ed401318a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Limit Students in Class</sys_name>
         <sys_overrides/>
         <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
@@ -68,7 +61,7 @@
         <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
         <sys_update_name>sys_script_0d819027c3b5221034d93d0ed401318a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-03 21:57:26</sys_updated_on>
+        <sys_updated_on>2025-06-06 09:54:21</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

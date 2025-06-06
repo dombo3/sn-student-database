@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1298781_student.StudentClassValidator</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>
+|
+Methods:
+* initialize()
+* canAssignStudentToClass()</description>
+        <name>StudentClassValidator</name>
+        <script><![CDATA[var StudentClassValidator = Class.create();
+StudentClassValidator.prototype = {
+    initialize: function() {},
+    canAssignStudentToClass: function(classId) {
+        var maxProp = Number(gs.getProperty('x_1298781_student.max_student_per_class', '20'));
+        var max = isNaN(maxProp) ? 20 : maxProp;
+
+        var studentGr = new GlideAggregate('x_1298781_student_student');
+        studentGr.addQuery('class', classId);
+
+        studentGr.addAggregate('COUNT');
+        studentGr.query();
+
+        var count = 0;
+        if (studentGr.next()) {
+            count = Number(studentGr.getAggregate("COUNT"));
+        }
+
+        if (!isNaN(count) && count >= max) {
+            return {allowed: false, message: "Cannot assign student, Max number of students per class (" +  max + ") reached"};
+        }
+
+		return {allowed: true};
+    },
+    type: 'StudentClassValidator'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-06 09:52:20</sys_created_on>
+        <sys_id>47117d10c3c2221034d93d0ed40131ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>StudentClassValidator</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_update_name>sys_script_include_47117d10c3c2221034d93d0ed40131ef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-06 09:52:20</sys_updated_on>
+    </sys_script_include>
+</record_update>
