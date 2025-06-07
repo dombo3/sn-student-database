@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f17571d4c3c2221034d93d0ed40131a2" extends="task" label="Student Assignment Request" max_length="40" name="x_1298781_student_student_assignment_request" type="collection">
+        <element label="Class" max_length="32" name="class" reference="x_1298781_student_class" type="reference"/>
+        <element choice="1" default="1" label="StateTest" max_length="40" name="statetest" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="100" value="1"/>
+                <element inactive_on_update="false" label="Rejected" sequence="300" value="3"/>
+                <element inactive_on_update="false" label="Approved" sequence="200" value="2"/>
+            </choice>
+        </element>
+        <element label="Student" max_length="32" name="student" reference="x_1298781_student_student" type="reference"/>
+        <element choice="3" default="1" label="StateTestChoice" max_length="40" name="statetestchoice" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="300" value="3"/>
+                <element inactive_on_update="false" label="Approved" sequence="200" value="2"/>
+                <element inactive_on_update="false" label="New" sequence="100" value="1"/>
+            </choice>
+        </element>
+    </element>
+</database>
