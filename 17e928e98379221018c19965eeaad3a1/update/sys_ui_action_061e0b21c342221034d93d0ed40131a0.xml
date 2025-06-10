@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>approve_assignment</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>gs.hasRole('x_1298781_student.class_assigner')</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>true</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Reject Assignment</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[myFunction();
+
+function myFunction() {
+    if (!gs.hasRole('x_1298781_student.class_assigner')) {
+        gs.addErrorMessage("You don't have the permission to Reject the Task");
+        return;
+    }
+
+    if (current.state != 1) {
+        gs.addErrorMessage("Only New Class Assignment Tasks can be rejected");
+        return;
+    }
+
+    current.state = 3;
+    current.update();
+
+    action.setRedirectURL(current);
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 13:46:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>061e0b21c342221034d93d0ed40131a0</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Reject Assignment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_update_name>sys_ui_action_061e0b21c342221034d93d0ed40131a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-10 14:00:37</sys_updated_on>
+        <table>x_1298781_student_student_assignment_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>
