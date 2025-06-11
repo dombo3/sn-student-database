@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Subject</name>
+        <order>100</order>
+        <roles>x_1298781_student.subject_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 13:01:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0a4dc0c6c386221034d93d0ed40131e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subject</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_update_name>sys_app_application_0a4dc0c6c386221034d93d0ed40131e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 13:01:26</sys_updated_on>
+        <title>Subject</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Student Database">17e928e98379221018c19965eeaad3a1</application>
+        <file_path/>
+        <instance_id>8ee2e0d53b4b465cc55a348aa4e45af2</instance_id>
+        <instance_name>dev278190</instance_name>
+        <name>sys_app_application_0a4dc0c6c386221034d93d0ed40131e4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Subject</name><order>100</order><roles>x_1298781_student.subject_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-06-11 13:01:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0a4dc0c6c386221034d93d0ed40131e4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Subject</sys_name><sys_overrides/><sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package><sys_policy/><sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope><sys_update_name>sys_app_application_0a4dc0c6c386221034d93d0ed40131e4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-06-11 13:01:26</sys_updated_on><title>Subject</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>1830025243</payload_hash>
+        <record_name>Subject</record_name>
+        <reverted_from/>
+        <source>656689f5c331221034d93d0ed4013149</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 13:01:26</sys_created_on>
+        <sys_id>4a4dc0c6c386221034d93d0ed40131e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1975f14c7ce0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 13:01:26</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>0e4dc0c6618622104fd01a020e8884e7</update_guid>
+        <update_guid_history>0e4dc0c6618622104fd01a020e8884e7:1830025243</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Subject">509d44c6c386221034d93d0ed40131e0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 13:02:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>374dd3bebab549399cb43f884fc7e019</sys_id>
+        <sys_metadata>0a4dc0c6c386221034d93d0ed40131e4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subject</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_scope_delete display_value="">4ffeece982b04aa7b840646d3cd2edc1</sys_scope_delete>
+        <sys_update_name>sys_app_application_0a4dc0c6c386221034d93d0ed40131e4</sys_update_name>
+        <sys_update_version display_value="sys_app_application_0a4dc0c6c386221034d93d0ed40131e4">4a4dc0c6c386221034d93d0ed40131e8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 13:02:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

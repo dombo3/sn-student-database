@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a28c4cc2c386221034d93d0ed40131ba" label="Subject" max_length="40" name="x_1298781_student_subject" type="collection">
+        <element label="Number" max_length="40" name="number" type="integer"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+    </element>
+</database>

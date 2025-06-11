@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8fde88c6c386221034d93d0ed4013112" label="M2M Students Subjects" max_length="40" name="x_1298781_student_m2m_x_1298781_st_x_1298781_st" type="collection">
+        <element attributes="encode_utf8=false" label="Subjects" max_length="32" name="x_1298781_student_subject" reference="x_1298781_student_subject" type="reference"/>
+        <element attributes="encode_utf8=false" label="Students" max_length="32" name="x_1298781_student_student" reference="x_1298781_student_student" type="reference"/>
+        <index name="index">
+            <element name="x_1298781_student_student"/>
+        </index>
+        <index name="index2">
+            <element name="x_1298781_student_subject"/>
+        </index>
+    </element>
+</database>

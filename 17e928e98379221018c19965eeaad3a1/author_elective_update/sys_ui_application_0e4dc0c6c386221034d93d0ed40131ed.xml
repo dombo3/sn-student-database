@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="DELETE">
+        <active>true</active>
+        <hint/>
+        <name>Subject</name>
+        <order/>
+        <roles>x_1298781_student.subject_user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 13:01:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0e4dc0c6c386221034d93d0ed40131ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subject</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_update_name>sys_ui_application_0e4dc0c6c386221034d93d0ed40131ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 13:01:26</sys_updated_on>
+    </sys_ui_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Student Database">17e928e98379221018c19965eeaad3a1</application>
+        <file_path/>
+        <instance_id>8ee2e0d53b4b465cc55a348aa4e45af2</instance_id>
+        <instance_name>dev278190</instance_name>
+        <name>sys_ui_application_0e4dc0c6c386221034d93d0ed40131ed</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application"><sys_ui_application action="INSERT_OR_UPDATE"><active>true</active><hint/><name>Subject</name><order/><roles>x_1298781_student.subject_user</roles><sys_class_name>sys_ui_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-06-11 13:01:26</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0e4dc0c6c386221034d93d0ed40131ed</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Subject</sys_name><sys_overrides/><sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package><sys_policy/><sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope><sys_update_name>sys_ui_application_0e4dc0c6c386221034d93d0ed40131ed</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-06-11 13:01:26</sys_updated_on></sys_ui_application></record_update>]]></payload>
+        <payload_hash>-742315615</payload_hash>
+        <record_name>Subject</record_name>
+        <reverted_from/>
+        <source>656689f5c331221034d93d0ed4013149</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 13:01:27</sys_created_on>
+        <sys_id>ce4dc0c6c386221034d93d0ed40131f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1975f14c8f00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 13:01:27</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>824dc0c6e186221023847d8ab302a6f0</update_guid>
+        <update_guid_history>824dc0c6e186221023847d8ab302a6f0:-742315615</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 13:02:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_application">sys_ui_application</sys_db_object>
+        <sys_id>bc3dc8200a6744e696121fe67cd3b5c4</sys_id>
+        <sys_metadata>0e4dc0c6c386221034d93d0ed40131ed</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Subject</sys_name>
+        <sys_package display_value="Student Database" source="x_1298781_student">17e928e98379221018c19965eeaad3a1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Student Database">17e928e98379221018c19965eeaad3a1</sys_scope>
+        <sys_scope_delete display_value="">4ffeece982b04aa7b840646d3cd2edc1</sys_scope_delete>
+        <sys_update_name>sys_ui_application_0e4dc0c6c386221034d93d0ed40131ed</sys_update_name>
+        <sys_update_version display_value="sys_ui_application_0e4dc0c6c386221034d93d0ed40131ed">ce4dc0c6c386221034d93d0ed40131f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 13:02:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
