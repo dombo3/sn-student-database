@@ -2,5 +2,6 @@
     <element db_object_id="719aecad8379221018c19965eeaad3c0" label="Class" max_length="40" name="x_1298781_student_class" type="collection">
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="100" name="name" type="string"/>
+        <element calculation="(function(current) {&#13;&#10;&#9;var ga = new GlideAggregate('x_1298781_student_student');&#13;&#10;    ga.addQuery('class', current.sys_id);&#13;&#10;    ga.addAggregate('COUNT');&#13;&#10;    ga.query();&#13;&#10;    if (ga.next()) {&#13;&#10;&#9;&#9;return Number(ga.getAggregate('COUNT'));&#13;&#10;    }&#13;&#10;    return 0;&#13;&#10;})(current);" label="Number of Students" max_length="40" name="number_of_students" type="integer" virtual="true"/>
     </element>
 </database>
