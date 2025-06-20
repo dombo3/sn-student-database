@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="a28c4cc2c386221034d93d0ed40131ba" label="Subject" max_length="40" name="x_1298781_student_subject" type="collection">
+        <element label="Number" max_length="100" name="sys_number" type="string"/>
         <element label="Number" max_length="40" name="number" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;var studentsGr = new GlideAggregate(&quot;x_1298781_student_m2m_x_1298781_st_x_1298781_st&quot;);&#13;&#10;&#9;studentsGr.addQuery(&quot;x_1298781_student_subject&quot;, current.getUniqueValue());&#13;&#10;&#9;studentsGr.addAggregate(&quot;COUNT&quot;);&#13;&#10;&#9;studentsGr.query();&#13;&#10;&#9;if (studentsGr.next()) {&#13;&#10;&#9;&#9;return Number(studentsGr.getAggregate(&quot;COUNT&quot;));&#13;&#10;&#9;}&#13;&#10;&#9;return 0;&#13;&#10;})(current);" label="Number of Students" max_length="40" name="number_of_students" type="integer" virtual="true"/>
         <element label="Name" max_length="100" name="name" type="string"/>
     </element>
 </database>
